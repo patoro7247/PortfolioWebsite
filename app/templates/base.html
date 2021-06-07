@@ -1,5 +1,7 @@
 <html>
 	<head>
+		<link rel="stylesheet" type="text/css" href="style.css" />
+		
 		{% if title %}
 			<title>{{ title }} - My Blog</title>
 		{% else %}
@@ -7,13 +9,12 @@
 		{% endif %}
 		<meta charset="utf-8">
 	</head>
-	<body>
-			<div>Blog: 
-				<a href="{{ url_for('index') }}">Home</a>
-				<a href="{{ url_for('login') }}">Login</a>
-			</div>
 
-			<hr>
+
+			{% if header %}
+				<h1>{{ header }} </h1>
+			{% endif %}
+
 			{% with messages = get_flashed_messages() %}
 			{% if messages %}
 			<ul>
@@ -24,5 +25,6 @@
 			{% endif %}
 			{% endwith %}
 			{% block content %}{% endblock %}
+
 	</body>
 </html>

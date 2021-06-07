@@ -32,3 +32,7 @@ def login():
 def post():
 	form = PostForm()
 	return render_template('post.html', title='Post', form=form)
+
+@app.route('/about')
+def about():
+	return render_template('about.html', title ='About Me', header='About Me')
