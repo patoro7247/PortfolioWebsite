@@ -1,30 +1,28 @@
 <html>
 	<head>
-		<link rel="stylesheet" type="text/css" href="style.css" />
-		
-		{% if title %}
-			<title>{{ title }} - My Blog</title>
-		{% else %}
-			<title>Welcome to My Blog</title>
-		{% endif %}
-		<meta charset="utf-8">
+		<title>My website</title>
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}" />
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
 	</head>
+	<body>
+		<div id="container">
+			<div id="nav">
+				<ul>
+					<li><a class="selected" href="/">Home</a></li>
+					<li><a class="selected" href="/about">About Me</a></li>
+					<li><a class="selected" href="/sideprojects">Side Projects</a></li>
+				</ul>
 
+			</div>
 
-			{% if header %}
-				<h1>{{ header }} </h1>
-			{% endif %}
+			{% block content %}
+			{% endblock %}
 
-			{% with messages = get_flashed_messages() %}
-			{% if messages %}
-			<ul>
-				{% for message in messages %}
-				<li>{{ message }}</li>
-				{% endfor %}
-			</ul>
-			{% endif %}
-			{% endwith %}
-			{% block content %}{% endblock %}
-
+			<!-- Figure out why Flask anchor isnt underlined -->
+			<div id="footer">
+				Made with <a class="flask_link" href="https://flask.palletsprojects.com/en/2.0.x/" style="text-decoration: underline black;">Flask</a> &emsp; Copyright &copy; 2021 Patrick Harding
+			</div>
+		</div>
 	</body>
 </html>
