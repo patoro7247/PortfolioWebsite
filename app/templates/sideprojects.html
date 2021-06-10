@@ -1,7 +1,9 @@
 {% extends "base.html" %}
 
 {%  block content %}
-
+	<div id="header">
+				<h1> {{ header }} </h1>
+			</div>
 	{% for post in posts %}
 			<div><p>Author: {{ post.author.username }}</p>
 			<p>Date: {{ post.date }} </p>

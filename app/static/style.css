@@ -18,9 +18,17 @@
 	height: 40px;
 	color: black;
 	text-align: center;
-	background-color:  #588157;
+	background-color:  #464749;
 	box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
 
+}
+#header h1 {
+	margin: 0px;
+	padding-top: 5px;
+	color: white;
+	font-family: 'Roboto', sans-seriff;
+	font-size:  1.2vw;
+	text-shadow: -1px 1px 0 #000;
 }
 
 
@@ -33,6 +41,7 @@
 	width:  680px;
 	float:  right;
 	color: black;
+	margin-right: 20px;
 
 }
 
@@ -41,7 +50,7 @@
 	color:  black;
 	position: absolute;
 	bottom: 0;
-	width:  98%;
+	width:  100%;
 	height:  50px;
 	text-align: right;
 	font-size:  1rem;
@@ -52,9 +61,12 @@
 	text-decoration: underline black;
 	font-size: 1rem;
 }
+#footer p {
+	margin-right: 20px;
+}
 
 #nav {
-	background-color:  #C5C6C7;
+	background-color:  white;
 	text-align: center;
 	color:  white;
 	
@@ -67,25 +79,27 @@
 html {background-color: #1F2833 }
 
 
-ul{
+#nav ul{
 	width:  auto;
 	margin-top: 8px;
 	margin-block-end: 0px;
 
 }
 
-li{
+#nav li{
 	display: inline-block;
 	padding:  15px 30px;
 }
 
 a{
 	text-align: center;
-	color: inherit;
+	color: black;
 	font-family: 'Roboto', sans-seriff;
 	font-size:  1.2vw;
 	text-decoration: none;
 }
+
+
 
 a:hover {
 	color: black;
@@ -94,6 +108,7 @@ a:hover {
 }
 
 img {
+	margin-top: 16px;
 	max-width: 120%;
 	height: auto;
 }
@@ -101,4 +116,23 @@ img {
 #custom_link { 
 	padding: 10px 10px;
 
+}
+
+#home_text {
+	padding: 10px;
+	padding-left: 15px;
+	font-family: "Alice",serif;
+}
+#home_text p {
+	margin: 10px 15px;
+}
+
+#main p {
+	font-family: "Alice",serif;
+	font-size:  .9vw;
+	margin-block-end: 10px;
+}
+#main ul{	
+    margin-block-start: 0px;
+    
 }
