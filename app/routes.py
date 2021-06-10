@@ -37,11 +37,17 @@ def sideprojects():
 	#Mock object creation
 	user = {"username" : "Pat", "age" : 10, "grade" : "A"}
 	#More mock object creation: posts that contain an author, body of text, and date
-	posts = [{'author' : {'username' : 'Em'},
-			  'body' : 'I had a great day today',
-			  'date' : '6/4/2021'},
-			  {'author' : {'username' : 'Pat'},
-			   'body': 'This is one of the first posts on this blog',
-			   'date' : '6/3/2021'}]
+	posts = [{'project_name' : 'Spotify API Project',
+			  'project_body' : 'This project used Spotify\'s API to dump Spotify\'s \"Made For You\" playlist',
+			  'project_date' : '6/4/2021',
+			  'project_link': 'https://github.com/patoro7247/SpotifyAPIPythonProject'},
+			  {'project_name' : 'Python Dictionary API Game',
+			   'project_body': 'This game lets the user guess antonyms to random words',
+			   'project_date' : '6/3/2021',
+			   'project_link': 'https://github.com/patoro7247/DictionaryAPIgame'},
+			   {'project_name' : 'Bike Inventory Manager in C++',
+			   'project_body': 'This bike inventory manager allows a user to input a txt file',
+			   'project_date' : '6/10/2021',
+			   'project_link': 'https://github.com/patoro7247/Assignment-7.0'}]
 
 	return render_template('sideprojects.html', user=user, posts=posts, header=header)

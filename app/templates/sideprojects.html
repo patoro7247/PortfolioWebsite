@@ -2,14 +2,19 @@
 
 {%  block content %}
 	<div id="header">
-				<h1> {{ header }} </h1>
-			</div>
-	{% for post in posts %}
-			<div><p>Author: {{ post.author.username }}</p>
-			<p>Date: {{ post.date }} </p>
-			<b>{{ post.body }} </b>
-			</div>
-
-	{% endfor %}
+		<h1> {{ header }} </h1>
+	</div>
+	
+	<div id="post_container">
+			{% for post in posts %}
+			<a id="example_posts" href={{ post.project_link }}>
+				<div id="example_posts">
+					<h3> {{ post.project_name }} </h3>
+					<p> {{ post.project_body }} </p>
+				</div>
+			</a>
+			{% endfor %}
+		
+	</div>
 
 {% endblock %}
