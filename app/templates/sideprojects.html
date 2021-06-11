@@ -7,7 +7,7 @@
 	
 	<div id="post_container">
 			{% for post in posts %}
-			<a id="example_posts" href={{ post.project_link }}>
+			<a id="example_posts" href={{ post.project_link }} target="_blank" rel="noopener noreferrer">
 				<div id="example_posts">
 					<h3> {{ post.project_name }} </h3>
 					<p> {{ post.project_body }} </p>
